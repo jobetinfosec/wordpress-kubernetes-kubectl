@@ -1,0 +1,13 @@
+secretGenerator:
+- name: mysql-password
+  literals:
+  - password=PASSWORD_ROOT
+- name: mysql-user
+  literals:
+  - username=wpuser
+- name: mysql-user-password
+  literals:
+  - passworduser=PASSWORD_USER
+- name: mysql-database
+  literals:
+  - database=wordpress
