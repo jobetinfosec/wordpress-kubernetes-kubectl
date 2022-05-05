@@ -1,5 +1,4 @@
-
-###I) Install Nginx ingress
+I) Install Nginx ingress
 
 a) Run
 helm upgrade --install ingress-nginx ingress-nginx --repo https://kubernetes.github.io/ingress-nginx --namespace ingress-nginx --create-namespace
@@ -10,6 +9,7 @@ kubectl --namespace ingress-nginx get services -o wide -w ingress-nginx-controll
 c) Go to your DNS maintainer's site and create an A DNS record for your WordPress site
 
 
+
 II) Install Cert-Manager
 
 helm repo add jetstack https://charts.jetstack.io
@@ -17,6 +17,7 @@ helm repo add jetstack https://charts.jetstack.io
 helm repo update
 
 helm install cert-manager jetstack/cert-manager --namespace cert-manager --create-namespace --version v1.7.1 --set installCRDs=true
+
 
 
 III) Setup secrets
